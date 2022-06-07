@@ -1,3 +1,3 @@
 # WEB110 Matthew Farrar
 
-http://mfarrar93.github.io
+WEB110 Matthew Farrar
