@@ -1,14 +1,12 @@
-
 body {
-    background-color:azure;
-  }
-  
+    background-color: azure;
+}
+
 
 h1 {
     border-style: double;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-weight: bold
-
 }
 
 p {
@@ -19,6 +17,5 @@ p {
 
 table {
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size:larger
-
+    font-size: larger
 }
