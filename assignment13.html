@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Assignment 13</title>
+</head>
+<main>
+    <h1>Assignment 13</h1>
+    <p id="hello"></p>
+
+    <script>
+        document.getElementById("hello").innerHTML = "Hello World! Matt Farrar";
+    </script>
+    <p id="date"></p>
+
+    <script>
+        document.getElementById("date").innerHTML = Date();
+    </script>
+
+    <canvas id="canvas" width="500" height="500">
+        This text is displayed if your browser does not support HTML5 Canvas.
+    </canvas>
+
+    <script>
+        var example = document.getElementById("canvas");
+        var context = example.getContext("2d");
+
+        context.strokeStyle = "black";
+        context.fillStyle = "black";
+
+        context.font = "32px serif";
+        context.textAlign = "left";
+        context.strokeText("Canvas text", 20, 40);
+        context.fillText("Canvas text", 20, 40);
+        context.beginPath();
+        context.fillStyle = 'blue';
+        context.fillRect(50, 100, 50, 100)
+        context.closePath();
+
+        context.lineWidth = 7;
+        context.moveTo(25, 220);
+        context.lineTo(330, 400);
+        context.stroke();
+    </script>
+    <br>
+    <p>This was a very interesting assignment as I was unfamiliar with Javascript, especially in comparison with HTML
+        and CSS. I did not know how simple it was to create graphics and even interactive elements on an HTML web page.
+        I believe the canvas feature we used is new to HTML 5 and that may explain why when I looked at JavaScipt in the
+        past it seemed a bit more intimidating. While using JavaScript was more complex and closer to actual coding than
+        writing HTML, I still found it fairly straightforward and readable. I think the main challenge will be
+        remembering many new functions and integrating JavaScript with my knowledge of HTML and CSS</p>
+</main>
+
+</html>
