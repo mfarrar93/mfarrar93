@@ -23,8 +23,9 @@ table {
 #code {
 
     color: black;
-    text-align: center;
+    text-align: left;
     background-color: #E7E9EB;
     font-family: monospace;
+    align: center;
     
 }
