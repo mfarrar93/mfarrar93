@@ -19,3 +19,12 @@ table {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: larger
 }
+
+.code {
+
+    color: black;
+    text-align: center;
+    background-color: #E7E9EB;
+    font-family: monospace;
+    
+}
