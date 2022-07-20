@@ -50,7 +50,11 @@
         </p>
     <p>Activity 3: Insert, Update, and Delete</p>
     <p id="code">
-        
+        INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES ('4', 'On Time Delivery', '(503) 555 0123');<br>
+        UPDATE Products SET Price=+1;<br>
+        UPDATE Products SET Price=-1;<br>
+        UPDATE Shippers SET ShipperName="On-Time Delivery" WHERE ShipperID=4;<br>
+        DELETE FROM Shippers WHERE ShipperID=4;<br>
     </p>
 </main>
 
