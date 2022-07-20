@@ -8,12 +8,21 @@
 <main>
 
         <h1>Assignment 14</h1>
-    <p id="code">SELECT * FROM Customers;<br>
-    
+    <p>Activity 2: Single-Table Select statements</p>
+    <p id="code">
+        SELECT * FROM Customers;<br>
+        SELECT CustomerName,CustomerID FROM Customers;<br>
+        SELECT CustomerName,City,Address,PostalCode FROM Customers WHERE country="UK";<br>
+        SELECT ContactName,CustomerName FROM Customers ORDER BY ContactName ASC;<br>
+        SELECT COUNT(CustomerID) FROM Customers;<br>
+        SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country;<br>
+        SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country ORDER BY COUNT(CustomerID) DESC, Country ASC;<br>
+        SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country HAVING COUNT(CustomerID) >= 10 ORDER BY COUNT(CustomerID) DESC, Country ASC;<br>
     </p>
-
-        <p>
-        </p>
+    <p>Activity 2: Single-Table Select statements</p>
+    <p id="code">
+        
+    </p>
 </main>
 
 </html>
