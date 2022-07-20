@@ -19,7 +19,36 @@
         SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country ORDER BY COUNT(CustomerID) DESC, Country ASC;<br>
         SELECT COUNT(CustomerID), Country FROM Customers GROUP BY Country HAVING COUNT(CustomerID) >= 10 ORDER BY COUNT(CustomerID) DESC, Country ASC;<br>
     </p>
-    <p>Activity 2: Single-Table Select statements</p>
+    <p>Activity 2: Multi-Table Select statements</p>
+    <p id="code">
+        SELECT Customers.CustomerName, Orders.OrderID, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;<br>
+        SELECT Customers.CustomerName, Orders.OrderID AS [Order Number], Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;<br>
+        SELECT Customers.CustomerName, Orders.OrderID AS [Order Number], Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID ORDER BY Customers.CustomerID ASC, Orders.OrderID ASC;<br>
+        SELECT Orders.OrderID AS [Order Number], Orders.OrderDate AS [OrderDate], Products.ProductName AS [Product Name], OrderDetails.Quantity AS [Quantity Ordered]
+          FROM ((Orders
+          INNER JOIN OrderDetails
+          ON Orders.OrderID=OrderDetails.OrderID)
+          INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID);<br>
+        SELECT Orders.OrderID AS [Order Number], Orders.OrderDate AS [OrderDate], Products.ProductName AS [Product Name], OrderDetails.Quantity AS [Quantity Ordered], (Products.Price * OrderDetails.Quantity) AS [Extended Price]
+          FROM ((Orders
+          INNER JOIN OrderDetails
+          ON Orders.OrderID=OrderDetails.OrderID)
+          INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID);<br>
+        SELECT Orders.OrderID AS [Order Number], Orders.OrderDate AS [OrderDate], Products.ProductName AS [Product Name], OrderDetails.Quantity AS [Quantity Ordered], (Products.Price * OrderDetails.Quantity) AS [Extended Price]
+          FROM ((Orders
+          INNER JOIN OrderDetails
+          ON Orders.OrderID=OrderDetails.OrderID)
+          INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID)
+          WHERE Orders.CustomerID = 2<br>
+          SELECT Orders.OrderID AS [Order Number], Orders.OrderDate AS [OrderDate], Products.ProductName AS [Product Name], OrderDetails.Quantity AS [Quantity Ordered], (Products.Price * OrderDetails.Quantity) AS [Extended Price]
+          FROM (((Orders
+          INNER JOIN OrderDetails
+          ON Orders.OrderID=OrderDetails.OrderID)
+          INNER JOIN Products ON OrderDetails.ProductID=Products.ProductID)
+          INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID)
+          WHERE Customers.CustomerName = "Around the Horn";<br>
+        </p>
+    <p>Activity 3: Insert, Update, and Delete</p>
     <p id="code">
         
     </p>
